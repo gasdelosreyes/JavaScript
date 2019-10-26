@@ -7,6 +7,7 @@ document.write("<h2>Hello again World, Now I'm writing from a JavaScript file</h
 //const constantes
 // == o != compara 2 valores e intentan coexistir con el tipo de dato concatenandose
 // === o !== compara 2 valores y el tipo de dato.
+// for( let i = 0; condición; i++){código}
 var username = "Gastón";
 
 console.log({
