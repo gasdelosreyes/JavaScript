@@ -1,53 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Object Oriented Application</title>
     <!-- CDN's -->
-    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/pulse/bootstrap.min.css">
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a href="" class="navbar-brand">Listado de productos</a>
     </nav>
 
     <div class="container">
-        <div id="application" class="col-lg-12">
-            <div id="dataEntries" class="col-md-4">
-                <div class="header-entries">
-                    <h3>Ingreso de datos</h3>
+        <div id="application" class="row pt-5">
+            <div id="dataEntries" class="col-md-5">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title text-center">Ingreso de datos</h4>
+                    </div>
+                    <form class="card-body" id="product-form">
+                        <!-- Ver como automatizar con controller -->
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <!-- prepend is before the textbox-->
+                                    <span class="input-group-text">Name</span>
+                                </div>
+                                <input type="text" id="productName" placeholder="Product Name" class="form-control">
+                                <div class="input-group-append">
+                                    <!-- append is after the textbox-->
+                                    <button class="btn btn-outline-success">Check</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <!-- prepend is before the textbox-->
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                <input type="number" step="0.01" id="productPrice" placeholder="Price" class="form-control">
+                                <div class="input-group-append">
+                                    <!-- append is after the textbox-->
+                                    <button class="btn btn-outline-success">Check</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Year</span>
+                                </div>
+                                <input type="date" id="productDate" value="2019-01-01" min="2019-01-01" max="2019-12-31" class="form-control">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-success">Check</button>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" value="Save" class="btn btn-primary btn-block">
+                        <!-- btn-block tells the input that have to use all the width of the form-->
+                    </form>
                 </div>
-                <form action="" class="body-entries" id="productEntry">
-                    <div class="form-group">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend"> <!-- prepend is before the textbox-->
-                                <span class="input-group-text">Name</span>
-                            </div>
-                            <input type="text" name="" id="productName" placeholder="Product Name" class="form-control">
-                            <div class="input-group-append"> <!-- append is after the textbox-->
-                                <button class="btn btn-outline-success">Check</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend"> <!-- prepend is before the textbox-->
-                                <span class="input-group-text">$</span>
-                            </div>
-                            <input type="text" name="" id="productName" placeholder="Price" class="form-control">
-                            <div class="input-group-append"> <!-- append is after the textbox-->
-                                <button class="btn btn-outline-success">Check</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
             </div>
-            <div id="dataList" class="col-md-8">
-                <a href="">Datos listados</a>
+            <div id="product-list" class="col-md-7">
             </div>
         </div>
     </div>
+    <script src="./app.js"></script>
 </body>
+
 </html>
